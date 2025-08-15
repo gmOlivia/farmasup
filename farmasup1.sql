@@ -17,3 +17,40 @@ constraint fk_cargo foreign key (cargo) references cargo(codigocargo)
 insert into cargo(cargo) values ("gerente");
 insert into cargo(cargo) values ("estoquista");
 insert into cargo(cargo) values ("vendedor");
+
+create table tipo(
+codigotipo int primary key auto_increment,
+descricao varchar(100)
+);
+
+insert into tipo(tipo) values ("Frutado");
+insert into tipo(tipo) values ("Chá");
+insert into tipo(tipo) values ("Cremoso");
+
+create table produto(
+
+codigoProduto int primary key auto_increment,
+descricao varchar(100),
+valor decimal(5,2),
+quantidade int,
+foto varchar(100),
+nome varchar(100),
+tipo int,
+constraint fk_tipo foreign key (tipo) references tipo(codigotipo)
+);
+
+create table tipocliente(
+codigotipocli int primary key auto_increment,
+categoria varchar(800)
+);
+
+create table cliente(
+codigocliente int primary key auto_increment,
+nome varchar(60),
+fone varchar(15),
+email varchar(100),
+cnpj_cpf varchar(30),
+cep varchar(20),
+tipocliente int,
+constraint fk_tipocliente foreign key (tipocliente) references codigocliente(codigotipocli)
+);

@@ -108,6 +108,18 @@
       <DependentUpon>Cadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="Classe\user.cs" />
+    <Compile Include="estcad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="estcad.Designer.cs">
+      <DependentUpon>estcad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="estoque.Designer.cs">
+      <DependentUpon>estoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,8 +137,17 @@
     <EmbeddedResource Include="Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="estcad.resx">
+      <DependentUpon>estcad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="estoque.resx">
+      <DependentUpon>estoque.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu.resx">
+      <DependentUpon>menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

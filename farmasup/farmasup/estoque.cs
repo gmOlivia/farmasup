@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace farmasup
 {
-    public partial class menu : Form
+    public partial class estoque : Form
     {
-        public menu()
+        public estoque()
         {
             InitializeComponent();
-        }
-
-        private void btnestoque_Click(object sender, EventArgs e)
-        {
-            estoque estoque = new estoque();
-            estoque.ShowDialog();
         }
     }
 }

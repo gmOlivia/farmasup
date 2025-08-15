@@ -7,20 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace farmasup
 {
-    public partial class menu : Form
+    public partial class estcad : Form
     {
-        public menu()
+        MySqlConnection conexao;
+        public estcad()
         {
             InitializeComponent();
         }
 
-        private void btnestoque_Click(object sender, EventArgs e)
+        private void estcad_Load(object sender, EventArgs e)
         {
-            estoque estoque = new estoque();
-            estoque.ShowDialog();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
