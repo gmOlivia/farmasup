@@ -22,5 +22,11 @@ namespace farmasup
             estoque estoque = new estoque();
             estoque.ShowDialog();
         }
+
+        private void btnvendas_Click(object sender, EventArgs e)
+        {
+            vendas vendas = new vendas();
+            vendas.ShowDialog();
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnestoque = new System.Windows.Forms.Button();
+            this.btnvendas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnestoque
@@ -41,11 +42,22 @@
             this.btnestoque.UseVisualStyleBackColor = true;
             this.btnestoque.Click += new System.EventHandler(this.btnestoque_Click);
             // 
+            // btnvendas
+            // 
+            this.btnvendas.Location = new System.Drawing.Point(131, 40);
+            this.btnvendas.Name = "btnvendas";
+            this.btnvendas.Size = new System.Drawing.Size(75, 23);
+            this.btnvendas.TabIndex = 1;
+            this.btnvendas.Text = "Vendas";
+            this.btnvendas.UseVisualStyleBackColor = true;
+            this.btnvendas.Click += new System.EventHandler(this.btnvendas_Click);
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnvendas);
             this.Controls.Add(this.btnestoque);
             this.Name = "menu";
             this.Text = "menu";
@@ -56,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnestoque;
+        private System.Windows.Forms.Button btnvendas;
     }
 }

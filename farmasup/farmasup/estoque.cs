@@ -16,5 +16,19 @@ namespace farmasup
         {
             InitializeComponent();
         }
+
+        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            estcad estcad = new estcad();
+            estcad.MdiParent = this;
+            estcad.Show();
+        }
+
+        private void gerenciarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            estgen estgen = new estgen();
+            estgen.MdiParent = this;
+            estgen.Show();
+        }
     }
 }

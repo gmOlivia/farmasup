@@ -20,7 +20,7 @@ insert into cargo(cargo) values ("vendedor");
 
 create table tipo(
 codigotipo int primary key auto_increment,
-descricao varchar(100)
+tipo varchar(100)
 );
 
 insert into tipo(tipo) values ("Frutado");

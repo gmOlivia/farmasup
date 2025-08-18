@@ -30,7 +30,7 @@ namespace farmasup
                 /// </summary>
                 string data_source = "datasource=localhost;username=root;password='';database=farmacia";
                 conexao = new MySqlConnection(data_source);
-                string sql = "insert into usuario(nome,email,senha,cargo) values (@nome,@email,@senha,@cargo)";
+                string sql = "insert into usuario(nome,email,senha,cargo, ativo) values (@nome,@email,@senha,@cargo, 1)";
                 MySqlCommand command = new MySqlCommand(sql, conexao);
                 string senha = txtsenha.Text.Trim();// limpar os espaços gerados
                 string senhahash = BCrypt.Net.BCrypt.HashPassword(senha);
