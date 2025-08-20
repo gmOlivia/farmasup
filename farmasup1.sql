@@ -39,18 +39,23 @@ tipo int,
 constraint fk_tipo foreign key (tipo) references tipo(codigotipo)
 );
 
-create table tipocliente(
+create table categoria(
 codigotipocli int primary key auto_increment,
 categoria varchar(800)
 );
+
+insert into categoria(categoria) values ("Paciente");
+insert into categoria(categoria) values ("Profissional");
+insert into categoria(categoria) values ("Estabelecimento");
 
 create table cliente(
 codigocliente int primary key auto_increment,
 nome varchar(60),
 fone varchar(15),
 email varchar(100),
-cnpj_cpf varchar(30),
+cpf varchar(30),
 cep varchar(20),
-tipocliente int,
-constraint fk_tipocliente foreign key (tipocliente) references codigocliente(codigotipocli)
+foto varchar(100),
+categoria int,
+constraint fk_tipocliente foreign key (categoria) references categoria(codigotipocli)
 );

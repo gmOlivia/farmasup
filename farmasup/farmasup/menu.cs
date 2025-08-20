@@ -28,5 +28,11 @@ namespace farmasup
             vendas vendas = new vendas();
             vendas.ShowDialog();
         }
+
+        private void btnclientes_Click(object sender, EventArgs e)
+        {
+            clientes clientes = new clientes();
+            clientes.ShowDialog();
+        }
     }
 }

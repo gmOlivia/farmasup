@@ -99,3 +99,5 @@ C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.cs
 C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.csproj.Up2Date
 C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.exe
 C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.pdb
+C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.cadcli.resources
+C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.clientes.resources

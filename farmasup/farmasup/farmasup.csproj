@@ -107,7 +107,19 @@
     <Compile Include="Cadastro.Designer.cs">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="cadcli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadcli.Designer.cs">
+      <DependentUpon>cadcli.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classe\user.cs" />
+    <Compile Include="clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientes.Designer.cs">
+      <DependentUpon>clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="estcad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +166,12 @@
     </Compile>
     <EmbeddedResource Include="Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadcli.resx">
+      <DependentUpon>cadcli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientes.resx">
+      <DependentUpon>clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="estcad.resx">
       <DependentUpon>estcad.cs</DependentUpon>
