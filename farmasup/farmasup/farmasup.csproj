@@ -203,6 +203,9 @@
     <EmbeddedResource Include="vendas.resx">
       <DependentUpon>vendas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vendasreg.resx">
+      <DependentUpon>vendasreg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="venreg.resx">
       <DependentUpon>venreg.cs</DependentUpon>
     </EmbeddedResource>
