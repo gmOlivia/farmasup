@@ -35,21 +35,24 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numQuantidade = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtdesconto = new System.Windows.Forms.TextBox();
             this.btnaplicar = new System.Windows.Forms.Button();
             this.btnbuscar = new System.Windows.Forms.Button();
-            this.dgvVenda = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbpgto = new System.Windows.Forms.ComboBox();
             this.cmbPagto = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbltotal = new System.Windows.Forms.Label();
             this.btnregistro = new System.Windows.Forms.Button();
-            this.nomeproduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.dgvVenda = new System.Windows.Forms.DataGridView();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblValor = new System.Windows.Forms.Label();
+            this.lblEstoque = new System.Windows.Forms.Label();
+            this.lblTipo = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,12 +120,12 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Tipo:";
             // 
-            // numericUpDown1
+            // numQuantidade
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(16, 335);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(74, 22);
-            this.numericUpDown1.TabIndex = 7;
+            this.numQuantidade.Location = new System.Drawing.Point(16, 335);
+            this.numQuantidade.Name = "numQuantidade";
+            this.numQuantidade.Size = new System.Drawing.Size(74, 22);
+            this.numQuantidade.TabIndex = 7;
             // 
             // label7
             // 
@@ -157,6 +160,7 @@
             this.btnaplicar.TabIndex = 11;
             this.btnaplicar.Text = "Aplicar";
             this.btnaplicar.UseVisualStyleBackColor = true;
+            this.btnaplicar.Click += new System.EventHandler(this.btnaplicar_Click);
             // 
             // btnbuscar
             // 
@@ -166,18 +170,7 @@
             this.btnbuscar.TabIndex = 12;
             this.btnbuscar.Text = "Buscar";
             this.btnbuscar.UseVisualStyleBackColor = true;
-            // 
-            // dgvVenda
-            // 
-            this.dgvVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomeproduto});
-            this.dgvVenda.Location = new System.Drawing.Point(407, 74);
-            this.dgvVenda.Name = "dgvVenda";
-            this.dgvVenda.RowHeadersWidth = 51;
-            this.dgvVenda.RowTemplate.Height = 24;
-            this.dgvVenda.Size = new System.Drawing.Size(447, 150);
-            this.dgvVenda.TabIndex = 13;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // label9
             // 
@@ -189,18 +182,18 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "VENDA";
             // 
-            // comboBox1
+            // cmbpgto
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbpgto.FormattingEnabled = true;
+            this.cmbpgto.Items.AddRange(new object[] {
             "Cartão de Credito",
             "Cartão de Debito",
             "PIX",
             "Dinheiro"});
-            this.comboBox1.Location = new System.Drawing.Point(407, 276);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(152, 24);
-            this.comboBox1.TabIndex = 15;
+            this.cmbpgto.Location = new System.Drawing.Point(407, 276);
+            this.cmbpgto.Name = "cmbpgto";
+            this.cmbpgto.Size = new System.Drawing.Size(152, 24);
+            this.cmbpgto.TabIndex = 15;
             // 
             // cmbPagto
             // 
@@ -222,15 +215,15 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "TOTAL:";
             // 
-            // label11
+            // lbltotal
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(481, 340);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(18, 20);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "$";
+            this.lbltotal.AutoSize = true;
+            this.lbltotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotal.Location = new System.Drawing.Point(481, 340);
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(18, 20);
+            this.lbltotal.TabIndex = 18;
+            this.lbltotal.Text = "$";
             // 
             // btnregistro
             // 
@@ -240,33 +233,76 @@
             this.btnregistro.TabIndex = 19;
             this.btnregistro.Text = "Registrar";
             this.btnregistro.UseVisualStyleBackColor = true;
+            this.btnregistro.Click += new System.EventHandler(this.btnregistro_Click);
             // 
-            // nomeproduto
+            // dgvVenda
             // 
-            this.nomeproduto.HeaderText = "Nome Produto";
-            this.nomeproduto.MinimumWidth = 6;
-            this.nomeproduto.Name = "nomeproduto";
-            this.nomeproduto.ReadOnly = true;
-            this.nomeproduto.Width = 125;
+            this.dgvVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVenda.Location = new System.Drawing.Point(410, 81);
+            this.dgvVenda.Name = "dgvVenda";
+            this.dgvVenda.RowHeadersWidth = 51;
+            this.dgvVenda.RowTemplate.Height = 24;
+            this.dgvVenda.Size = new System.Drawing.Size(429, 150);
+            this.dgvVenda.TabIndex = 20;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(77, 161);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(51, 16);
+            this.lblNome.TabIndex = 21;
+            this.lblNome.Text = "label11";
+            // 
+            // lblValor
+            // 
+            this.lblValor.AutoSize = true;
+            this.lblValor.Location = new System.Drawing.Point(80, 192);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(51, 16);
+            this.lblValor.TabIndex = 22;
+            this.lblValor.Text = "label11";
+            // 
+            // lblEstoque
+            // 
+            this.lblEstoque.AutoSize = true;
+            this.lblEstoque.Location = new System.Drawing.Point(80, 226);
+            this.lblEstoque.Name = "lblEstoque";
+            this.lblEstoque.Size = new System.Drawing.Size(51, 16);
+            this.lblEstoque.TabIndex = 23;
+            this.lblEstoque.Text = "label11";
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Location = new System.Drawing.Point(80, 259);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(51, 16);
+            this.lblTipo.TabIndex = 24;
+            this.lblTipo.Text = "label11";
             // 
             // vendasreg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(866, 469);
+            this.Controls.Add(this.lblTipo);
+            this.Controls.Add(this.lblEstoque);
+            this.Controls.Add(this.lblValor);
+            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.dgvVenda);
             this.Controls.Add(this.btnregistro);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lbltotal);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cmbPagto);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbpgto);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dgvVenda);
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.btnaplicar);
             this.Controls.Add(this.txtdesconto);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numQuantidade);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -277,7 +313,7 @@
             this.Name = "vendasreg";
             this.Text = "vendasreg";
             this.Load += new System.EventHandler(this.vendasreg_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -293,19 +329,22 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numQuantidade;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtdesconto;
         private System.Windows.Forms.Button btnaplicar;
         private System.Windows.Forms.Button btnbuscar;
-        private System.Windows.Forms.DataGridView dgvVenda;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbpgto;
         private System.Windows.Forms.Label cmbPagto;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbltotal;
         private System.Windows.Forms.Button btnregistro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeproduto;
+        private System.Windows.Forms.DataGridView dgvVenda;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblValor;
+        private System.Windows.Forms.Label lblEstoque;
+        private System.Windows.Forms.Label lblTipo;
     }
 }
