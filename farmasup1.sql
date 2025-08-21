@@ -59,3 +59,21 @@ foto varchar(100),
 categoria int,
 constraint fk_tipocliente foreign key (categoria) references categoria(codigotipocli)
 );
+
+create table venda (
+    idVenda int primary key auto_increment,
+    dataVenda datetime not null,
+    formaPagamento varchar(50) not null,
+    desconto decimal(5,2) default 0,
+    valorTotal decimal(10,2) not null
+);
+
+create table vendaItem (
+    idVendaItem int primary key auto_increment,
+    idVenda int,
+    codigoProduto int,
+    quantidade int not null,
+    precoUnitario decimal(10,2) not null,
+    foreign key (idVenda) references venda(idVenda),
+    foreign key (codigoProduto) references produto(codigoProduto)
+);
