@@ -51,7 +51,7 @@
             this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvVenda = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbpagamento = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lbltotal = new System.Windows.Forms.Label();
             this.btnregistrar = new System.Windows.Forms.Button();
@@ -93,6 +93,7 @@
             this.btnbuscar.TabIndex = 3;
             this.btnbuscar.Text = "Buscar";
             this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // lblvalor
             // 
@@ -214,7 +215,6 @@
             this.Subtotal.HeaderText = "Subtotal";
             this.Subtotal.MinimumWidth = 6;
             this.Subtotal.Name = "Subtotal";
-            this.Subtotal.ReadOnly = true;
             this.Subtotal.Width = 125;
             // 
             // Desconto
@@ -222,7 +222,6 @@
             this.Desconto.HeaderText = "Desconto";
             this.Desconto.MinimumWidth = 6;
             this.Desconto.Name = "Desconto";
-            this.Desconto.ReadOnly = true;
             this.Desconto.Width = 125;
             // 
             // Preco
@@ -230,7 +229,6 @@
             this.Preco.HeaderText = "Preço";
             this.Preco.MinimumWidth = 6;
             this.Preco.Name = "Preco";
-            this.Preco.ReadOnly = true;
             this.Preco.Width = 125;
             // 
             // Quantidade
@@ -238,7 +236,6 @@
             this.Quantidade.HeaderText = "Quantidade";
             this.Quantidade.MinimumWidth = 6;
             this.Quantidade.Name = "Quantidade";
-            this.Quantidade.ReadOnly = true;
             this.Quantidade.Width = 125;
             // 
             // Nome
@@ -246,11 +243,11 @@
             this.Nome.HeaderText = "Nome";
             this.Nome.MinimumWidth = 6;
             this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
             this.Nome.Width = 125;
             // 
             // dgvVenda
             // 
+            this.dgvVenda.AllowUserToAddRows = false;
             this.dgvVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
@@ -258,20 +255,25 @@
             this.Preco,
             this.Desconto,
             this.Subtotal});
-            this.dgvVenda.Location = new System.Drawing.Point(429, 100);
+            this.dgvVenda.Location = new System.Drawing.Point(429, 115);
             this.dgvVenda.Name = "dgvVenda";
             this.dgvVenda.RowHeadersWidth = 51;
             this.dgvVenda.RowTemplate.Height = 24;
-            this.dgvVenda.Size = new System.Drawing.Size(428, 275);
+            this.dgvVenda.Size = new System.Drawing.Size(422, 275);
             this.dgvVenda.TabIndex = 17;
             // 
-            // comboBox1
+            // cmbpagamento
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(429, 396);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 19;
+            this.cmbpagamento.FormattingEnabled = true;
+            this.cmbpagamento.Items.AddRange(new object[] {
+            "Cartão de Credito",
+            "Cartão de Debito",
+            "PIX",
+            "Dinheiro"});
+            this.cmbpagamento.Location = new System.Drawing.Point(429, 396);
+            this.cmbpagamento.Name = "cmbpagamento";
+            this.cmbpagamento.Size = new System.Drawing.Size(121, 24);
+            this.cmbpagamento.TabIndex = 19;
             // 
             // label7
             // 
@@ -301,6 +303,7 @@
             this.btnregistrar.TabIndex = 22;
             this.btnregistrar.Text = "Registrar";
             this.btnregistrar.UseVisualStyleBackColor = true;
+            this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
             // 
             // venreg
             // 
@@ -310,7 +313,7 @@
             this.Controls.Add(this.btnregistrar);
             this.Controls.Add(this.lbltotal);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbpagamento);
             this.Controls.Add(this.btnadicionar);
             this.Controls.Add(this.numQuantidade);
             this.Controls.Add(this.txtdesconto);
@@ -363,7 +366,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridView dgvVenda;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbpagamento;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbltotal;
         private System.Windows.Forms.Button btnregistrar;

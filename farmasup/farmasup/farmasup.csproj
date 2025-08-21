@@ -158,6 +158,12 @@
     <Compile Include="vendas.Designer.cs">
       <DependentUpon>vendas.cs</DependentUpon>
     </Compile>
+    <Compile Include="vendasreg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vendasreg.Designer.cs">
+      <DependentUpon>vendasreg.cs</DependentUpon>
+    </Compile>
     <Compile Include="venreg.cs">
       <SubType>Form</SubType>
     </Compile>

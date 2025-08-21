@@ -101,3 +101,6 @@ C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.ex
 C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.pdb
 C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.cadcli.resources
 C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.clientes.resources
+C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.cadcli.resources
+C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.clientes.resources
+C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.venreg.resources
