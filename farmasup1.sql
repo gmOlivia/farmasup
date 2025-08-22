@@ -75,7 +75,7 @@ create table venda_itens (
     preco_unitario DECIMAL(10,2) NOT NULL,
     desconto DECIMAL(10,2) DEFAULT 0,
     FOREIGN KEY (venda_id) REFERENCES vendas(id),
-    FOREIGN KEY (produto_id) REFERENCES produtos(id)
+    FOREIGN KEY (produto_id) REFERENCES produto(codigoProduto)
 );
 
 SELECT * FROM produto WHERE nome LIKE @nome;

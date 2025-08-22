@@ -17,48 +17,70 @@ namespace farmasup
         public vendasvisu()
         {
             InitializeComponent();
-            conexao = new MySqlConnection("server=localhost;database=farmacia;uid=root;pwd=senha;");
+            conexao = new MySqlConnection("server=localhost;database=farmacia;uid=root;pwd='';");
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                conexao.Open();
+            
+        }
 
-                string sql = @"SELECT v.id AS 'Código Venda',
-                                      v.data_venda AS 'Data',
-                                      v.total AS 'Total',
-                                      v.forma_pagamento AS 'Forma de Pagamento'
-                               FROM vendas v
-                               WHERE v.data_venda BETWEEN @dataDe AND @dataAte
-                               ORDER BY v.data_venda";
-                MySqlCommand cmd = new MySqlCommand(sql, conexao);
-                cmd.Parameters.AddWithValue("@dataDe", dtpDe.Value.Date);
-                cmd.Parameters.AddWithValue("@dataAte", dtpAte.Value.Date.AddDays(1).AddSeconds(-1));
-                //
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+        private void vendasvisu_Load(object sender, EventArgs e)
+        {
+            //formatar o datapicker
+            dtpDe.Format = DateTimePickerFormat.Short;
+            dtpAte.Format = DateTimePickerFormat.Short;
+            dtpDe.Value = DateTime.Today;
+            dtpAte.Value = DateTime.Today;
 
-                dgvVendas.DataSource = dt;
-                // calcula o total do período
-                decimal soma = 0;
-                foreach (DataRow row in dt.Rows)
-                {
-                    soma += Convert.ToDecimal(row["Total"]);
-                }
+            //configurações de DGV
+            dgvVendas.AutoGenerateColumns = false;
+            dgvVendas.AllowUserToAddRows = false;
+            dgvVendas.ReadOnly = true;
+            dgvVendas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvVendas.Columns.Clear();
 
-                lblTotalPeriodo.Text = $"Total no período: R$ {soma:F2}";
-            }
-            catch (Exception ex)
+            //Colunas → DataPropertyName deve bater com os nomes vindos do SELECT
+            dgvVendas.Columns.Add(new DataGridViewTextBoxColumn
             {
-                MessageBox.Show("Erro ao buscar vendas: " + ex.Message);
-            }
-            finally
+                Name = "colId",
+                HeaderText = "ID",
+                DataPropertyName = "id",
+                Width = 60
+            });
+            dgvVendas.Columns.Add(new DataGridViewTextBoxColumn
             {
-                conexao.Close();
-            }
+                Name = "colData",
+                HeaderText = "Data/Hora",
+                DataPropertyName = "data_venda",
+                Width = 150,
+                DefaultCellStyle = { Format = "dd/MM/yyyy HH:mm" }
+            });
+            dgvVendas.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colFP",
+                HeaderText = "Forma de Pagamento",
+                DataPropertyName = "forma_pagamento",
+                Width = 150
+            });
+            dgvVendas.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colTotal",
+                HeaderText = "Total",
+                DataPropertyName = "total",
+                Width = 100,
+                DefaultCellStyle = { Format = "C2", Alignment = DataGridViewContentAlignment.MiddleRight }
+            });
+
+            LimparResumo();
+        }
+
+        private void LimparResumo()
+        {
+            lblQtdVendas.Text = "0";
+            lblQtdVendas.Text = (0m).ToString("C2");
+            lblTicketMedio.Text = (0m).ToString("C2");
+            lblItensVendidos.Text = "0";
         }
     }
 }
