@@ -104,3 +104,9 @@ C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.cl
 C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.cadcli.resources
 C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.clientes.resources
 C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.vendasreg.resources
+C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.fornecedores.resources
+C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.vendasreg.resources
+C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.vendasvisu.resources
+C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\bin\Debug\vendasreg.resx
+C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\bin\Debug\vendasreg.cs
+C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\bin\Debug\vendasreg.Designer.cs

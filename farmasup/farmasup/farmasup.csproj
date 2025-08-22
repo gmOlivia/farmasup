@@ -166,9 +166,11 @@
     </Compile>
     <Compile Include="vendasreg.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="vendasreg.Designer.cs">
       <DependentUpon>vendasreg.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="vendasvisu.cs">
       <SubType>Form</SubType>
@@ -214,6 +216,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vendasreg.resx">
       <DependentUpon>vendasreg.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="vendasvisu.resx">
       <DependentUpon>vendasvisu.cs</DependentUpon>
