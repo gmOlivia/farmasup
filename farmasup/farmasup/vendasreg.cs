@@ -25,7 +25,7 @@ namespace farmasup
         {
             decimal total = 0;
 
-            foreach(DataGridViewRow row in dgvVenda.Rows)
+            foreach (DataGridViewRow row in dgvVenda.Rows)
             {
                 if (row.Cells["Subtotal"].Value != null)
                 {
@@ -40,6 +40,8 @@ namespace farmasup
             dgvVenda.AllowUserToAddRows = false; // Impede que o usuário adicione novas linhas manualmente
 
             // Configurações iniciais do formulário de vendas
+
+            dgvVenda.Columns.Add("Codigo", "Código");
             dgvVenda.Columns.Add("Nome", "Nome");
             dgvVenda.Columns.Add("Quantidade", "Quantidade");
             dgvVenda.Columns.Add("PrecoUnit", "Preço Unit.");
@@ -131,48 +133,54 @@ namespace farmasup
 
         private void btnregistro_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection conexao = new MySqlConnection(connStr))
+            try
             {
-                conexao.Open();
-                var trans = conexao.BeginTransaction();
-
-                try
+                using (MySqlConnection conexao = new MySqlConnection(connStr))
                 {
-                    //calcular valor total da venda
-                    decimal totalVenda = 0;
-                    foreach (DataGridViewRow row in dgvVenda.Rows)
+                    conexao.Open();
+
+                    // Pega os valores da tela
+                    string nomeProduto = lblNome.Text;
+                    int quantidadeVenda = (int)numQuantidade.Value;
+                    decimal precoUnitario = decimal.Parse(lblValor.Text);
+                    decimal desconto = string.IsNullOrEmpty(txtdesconto.Text) ? 0 : decimal.Parse(txtdesconto.Text);
+
+                    // Verifica estoque disponível
+                    int estoqueAtual = int.Parse(lblEstoque.Text);
+                    if (quantidadeVenda > estoqueAtual)
                     {
-                        if (row.Cells["Subtotal"].Value != null)
-                        {
-                            totalVenda += decimal.Parse(row.Cells["Subtotal"].Value.ToString(), System.Globalization.NumberStyles.Currency);
-                        }
+                        MessageBox.Show("Estoque insuficiente para essa venda!");
+                        return;
                     }
 
-                    //inserir venda
-                    var cmdVenda = new MySqlCommand("INSERT INTO venda (dataVenda, totalVenda, formaPagamento, desconto) VALUES (NOW(),@totalVenda, @fp, 0); SELECT LAST_INSERT_ID()", conexao, trans);
-                    cmdVenda.Parameters.AddWithValue("@fp", cmbPagamento.SelectedItem.ToString());
-                    cmdVenda.Parameters.AddWithValue("totalVenda", totalVenda);
+                    // Calcula valor final (já com desconto aplicado por unidade)
+                    decimal valorFinal = (precoUnitario - desconto) * quantidadeVenda;
 
-                    int idVenda = Convert.ToInt32(cmdVenda.ExecuteScalar());
+                    // --- 1. Registrar a venda (tabela 'vendas') ---
+                    string sqlVenda = @"INSERT INTO vendas (produto, quantidade, preco_unitario, desconto, valor_total, data_venda) 
+                                VALUES (@produto, @quantidade, @preco, @desconto, @total, NOW())";
 
+                    MySqlCommand cmdVenda = new MySqlCommand(sqlVenda, conexao);
+                    cmdVenda.Parameters.AddWithValue("@produto", nomeProduto);
+                    cmdVenda.Parameters.AddWithValue("@quantidade", quantidadeVenda);
+                    cmdVenda.Parameters.AddWithValue("@preco", precoUnitario);
+                    cmdVenda.Parameters.AddWithValue("@desconto", desconto);
+                    cmdVenda.Parameters.AddWithValue("@total", valorFinal);
+                    cmdVenda.ExecuteNonQuery();
 
-                    //inserir itens da venda
-                    foreach(DataGridViewRow row in dgvVenda.Rows)
-                    {
-                        int codigoProduto = Convert.ToInt32(row.Cells["Codigo"].Value);
-                        int qtd = Convert.ToInt32(row.Cells["Quantidade"].Value);
-                        decimal preco = decimal.Parse(row.Cells["PrecoUnit"].Value.ToString(), System.Globalization.NumberStyles.Currency);
-                        decimal desconto = decimal.Parse(row.Cells["Desconto"].Value.ToString(), System.Globalization.NumberStyles.Currency);
-                        var cmdItem = new MySqlCommand("INSERT INTO vendaitem (idVenda, codigoProduto, quantidade, precoUnitario, desconto) VALUES (@idVenda, @codigoProduto, @quantidade, @precoUnitario, @desconto)", conexao, trans);
+                    // --- 2. Atualizar o estoque do produto ---
+                    string sqlEstoque = "UPDATE produtos SET estoque = estoque - @qtd WHERE nome = @produto";
+                    MySqlCommand cmdEstoque = new MySqlCommand(sqlEstoque, conexao);
+                    cmdEstoque.Parameters.AddWithValue("@qtd", quantidadeVenda);
+                    cmdEstoque.Parameters.AddWithValue("@produto", nomeProduto);
+                    cmdEstoque.ExecuteNonQuery();
 
-                        cmdItem.Parameters.AddWithValue("@idVenda", idVenda);
-                        cmdItem.Parameters.AddWithValue("@codigoProduto", codigoProduto);
-                        cmdItem.Parameters.AddWithValue("@quantidade", qtd);
-                        cmdItem.Parameters.AddWithValue("@precoUnitario", preco);
-                        cmdItem.Parameters.AddWithValue("@desconto", desconto);
-                        cmdItem.ExecuteNonQuery();
-                    }
+                    MessageBox.Show("Venda registrada com sucesso!");
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao registrar venda: " + ex.Message);
             }
         }
     }

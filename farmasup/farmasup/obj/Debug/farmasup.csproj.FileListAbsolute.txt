@@ -103,4 +103,4 @@ C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.ca
 C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.clientes.resources
 C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.cadcli.resources
 C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.clientes.resources
-C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.venreg.resources
+C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.vendasreg.resources

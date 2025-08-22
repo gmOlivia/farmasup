@@ -32,7 +32,7 @@ create table produto(
 codigoProduto int primary key auto_increment,
 descricao varchar(100),
 valor decimal(5,2),
-quantidade int,
+estoque int,
 foto varchar(100),
 nome varchar(100),
 tipo int,
@@ -60,20 +60,32 @@ categoria int,
 constraint fk_tipocliente foreign key (categoria) references categoria(codigotipocli)
 );
 
-create table venda (
-    idVenda int primary key auto_increment,
-    dataVenda datetime not null,
-    formaPagamento varchar(50) not null,
-    desconto decimal(5,2) default 0,
-    valorTotal decimal(10,2) not null
+create table vendas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    data_venda DATETIME DEFAULT CURRENT_TIMESTAMP,
+    total DECIMAL(10,2) NOT NULL,
+    forma_pagamento VARCHAR(50) NOT NULL
 );
 
-create table vendaItem (
-    idVendaItem int primary key auto_increment,
-    idVenda int,
-    codigoProduto int,
-    quantidade int not null,
-    precoUnitario decimal(10,2) not null,
-    foreign key (idVenda) references venda(idVenda),
-    foreign key (codigoProduto) references produto(codigoProduto)
+create table venda_itens (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    venda_id INT NOT NULL,
+    produto_id INT NOT NULL,
+    quantidade INT NOT NULL,
+    preco_unitario DECIMAL(10,2) NOT NULL,
+    desconto DECIMAL(10,2) DEFAULT 0,
+    FOREIGN KEY (venda_id) REFERENCES vendas(id),
+    FOREIGN KEY (produto_id) REFERENCES produtos(id)
 );
+
+SELECT * FROM produto WHERE nome LIKE @nome;
+
+INSERT INTO vendas (total, forma_pagamento) 
+VALUES (@total, @formaPagamento);
+
+INSERT INTO venda_itens (venda_id, produto_id, quantidade, preco_unitario, desconto)
+VALUES (@vendaId, @produtoId, @quantidade, @preco, @desconto);
+
+UPDATE produtos 
+SET estoque = estoque - @quantidade 
+WHERE id = @produtoId;

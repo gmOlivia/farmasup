@@ -19,9 +19,16 @@ namespace farmasup
 
         private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            venreg venreg = new venreg();
-            venreg.MdiParent = this;
-            venreg.Show();
+            vendasreg vendasreg = new vendasreg();
+            vendasreg.MdiParent = this;
+            vendasreg.Show();
+        }
+
+        private void visualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vendasvisu vendasvisu = new vendasvisu();
+            vendasvisu.MdiParent = this;
+            vendasvisu.Show();
         }
     }
 }

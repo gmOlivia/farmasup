@@ -138,6 +138,12 @@
     <Compile Include="estoque.Designer.cs">
       <DependentUpon>estoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="fornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fornecedores.Designer.cs">
+      <DependentUpon>fornecedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,11 +170,11 @@
     <Compile Include="vendasreg.Designer.cs">
       <DependentUpon>vendasreg.cs</DependentUpon>
     </Compile>
-    <Compile Include="venreg.cs">
+    <Compile Include="vendasvisu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="venreg.Designer.cs">
-      <DependentUpon>venreg.cs</DependentUpon>
+    <Compile Include="vendasvisu.Designer.cs">
+      <DependentUpon>vendasvisu.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="estoque.resx">
       <DependentUpon>estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fornecedores.resx">
+      <DependentUpon>fornecedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -206,8 +215,8 @@
     <EmbeddedResource Include="vendasreg.resx">
       <DependentUpon>vendasreg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="venreg.resx">
-      <DependentUpon>venreg.cs</DependentUpon>
+    <EmbeddedResource Include="vendasvisu.resx">
+      <DependentUpon>vendasvisu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

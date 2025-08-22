@@ -34,12 +34,12 @@ namespace farmasup
                 /// </summary>
                 string data_source = "datasource=localhost;username=root;password='';database=farmacia";
                 conexao = new MySqlConnection(data_source);
-                string sql = "insert into produto(nome,valor,descricao,quantidade,tipo,foto) values (@nome,@valor,@descricao,@quantidade,@tipo,@foto)";
+                string sql = "insert into produto(nome,valor,descricao,estoque,tipo,foto) values (@nome,@valor,@descricao,@estoque,@tipo,@foto)";
                 MySqlCommand command = new MySqlCommand(sql, conexao);
                 command.Parameters.AddWithValue("@nome", txtnomep.Text);
                 command.Parameters.AddWithValue("@valor",Convert.ToDecimal(txtvalor.Text));
                 command.Parameters.AddWithValue("@descricao", txtdesc.Text);
-                command.Parameters.AddWithValue("@quantidade",Convert.ToInt32(txtquantidade.Text));
+                command.Parameters.AddWithValue("@estoque",Convert.ToInt32(txtquantidade.Text));
                 command.Parameters.AddWithValue("@foto", lblfoto.Text);
                 command.Parameters.AddWithValue("@tipo",Convert.ToInt32(txttipo.Text));
                 conexao.Open();
