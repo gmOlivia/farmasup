@@ -67,6 +67,7 @@
             this.gerenciarToolStripMenuItem.Name = "gerenciarToolStripMenuItem";
             this.gerenciarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.gerenciarToolStripMenuItem.Text = "Gerenciar";
+            this.gerenciarToolStripMenuItem.Click += new System.EventHandler(this.gerenciarToolStripMenuItem_Click);
             // 
             // clientes
             // 

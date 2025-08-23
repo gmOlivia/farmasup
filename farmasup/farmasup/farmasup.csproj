@@ -138,11 +138,11 @@
     <Compile Include="estoque.Designer.cs">
       <DependentUpon>estoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="fornecedores.cs">
+    <Compile Include="gencli.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fornecedores.Designer.cs">
-      <DependentUpon>fornecedores.cs</DependentUpon>
+    <Compile Include="gencli.Designer.cs">
+      <DependentUpon>gencli.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -190,11 +190,14 @@
     <EmbeddedResource Include="estcad.resx">
       <DependentUpon>estcad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="estgen.resx">
+      <DependentUpon>estgen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="estoque.resx">
       <DependentUpon>estoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fornecedores.resx">
-      <DependentUpon>fornecedores.cs</DependentUpon>
+    <EmbeddedResource Include="gencli.resx">
+      <DependentUpon>gencli.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

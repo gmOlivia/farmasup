@@ -110,3 +110,9 @@ C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.ve
 C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\bin\Debug\vendasreg.resx
 C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\bin\Debug\vendasreg.cs
 C:\Users\Aluno\Documents\GitHub\farmasup\farmasup\farmasup\bin\Debug\vendasreg.Designer.cs
+C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\bin\Debug\vendasreg.resx
+C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\bin\Debug\vendasreg.cs
+C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\bin\Debug\vendasreg.Designer.cs
+C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.vendasvisu.resources
+C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.gencli.resources
+C:\Users\José\Documents\GitHub\farmasup\farmasup\farmasup\obj\Debug\farmasup.estgen.resources

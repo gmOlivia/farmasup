@@ -17,71 +17,58 @@ namespace farmasup
         public vendasvisu()
         {
             InitializeComponent();
-            conexao = new MySqlConnection("server=localhost;database=farmacia;uid=root;pwd='';");
+            string connectionString = "datasource=localhost;username=root;password='';database=farmacia";
+            conexao = new MySqlConnection(connectionString);
+
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            
+            DateTime dataInicio = dtpDe.Value.Date;
+            DateTime dataFim = dtpAte.Value.Date.AddDays(1).AddSeconds(-1);
+
+            string query = @"
+                SELECT id, data_venda, total, forma_pagamento
+                FROM vendas
+                WHERE data_venda BETWEEN @inicio AND @fim
+                ORDER BY data_venda";
+
+            DataTable dtVendas = new DataTable();
+            decimal totalFaturado = 0;
+
+            try
+            {
+                conexao.Open();
+                MySqlCommand cmd = new MySqlCommand(query, conexao);
+                cmd.Parameters.AddWithValue("@inicio", dataInicio);
+                cmd.Parameters.AddWithValue("@fim", dataFim);
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(dtVendas);
+
+                dgvVendas.DataSource = dtVendas;
+
+                foreach (DataRow row in dtVendas.Rows)
+                {
+                    totalFaturado += Convert.ToDecimal(row["total"]);
+                }
+
+                lblQtdVendas.Text = dtVendas.Rows.Count.ToString();
+                lblTotalFaturado.Text = totalFaturado.ToString("C");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao buscar vendas: " + ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
 
         private void vendasvisu_Load(object sender, EventArgs e)
         {
-            //formatar o datapicker
-            dtpDe.Format = DateTimePickerFormat.Short;
-            dtpAte.Format = DateTimePickerFormat.Short;
-            dtpDe.Value = DateTime.Today;
-            dtpAte.Value = DateTime.Today;
 
-            //configurações de DGV
-            dgvVendas.AutoGenerateColumns = false;
-            dgvVendas.AllowUserToAddRows = false;
-            dgvVendas.ReadOnly = true;
-            dgvVendas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvVendas.Columns.Clear();
-
-            //Colunas → DataPropertyName deve bater com os nomes vindos do SELECT
-            dgvVendas.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                Name = "colId",
-                HeaderText = "ID",
-                DataPropertyName = "id",
-                Width = 60
-            });
-            dgvVendas.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                Name = "colData",
-                HeaderText = "Data/Hora",
-                DataPropertyName = "data_venda",
-                Width = 150,
-                DefaultCellStyle = { Format = "dd/MM/yyyy HH:mm" }
-            });
-            dgvVendas.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                Name = "colFP",
-                HeaderText = "Forma de Pagamento",
-                DataPropertyName = "forma_pagamento",
-                Width = 150
-            });
-            dgvVendas.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                Name = "colTotal",
-                HeaderText = "Total",
-                DataPropertyName = "total",
-                Width = 100,
-                DefaultCellStyle = { Format = "C2", Alignment = DataGridViewContentAlignment.MiddleRight }
-            });
-
-            LimparResumo();
-        }
-
-        private void LimparResumo()
-        {
-            lblQtdVendas.Text = "0";
-            lblQtdVendas.Text = (0m).ToString("C2");
-            lblTicketMedio.Text = (0m).ToString("C2");
-            lblItensVendidos.Text = "0";
         }
     }
 }
-        

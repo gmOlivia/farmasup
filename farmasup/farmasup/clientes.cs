@@ -23,5 +23,12 @@ namespace farmasup
             cadcli.MdiParent = this; 
             cadcli.Show();
         }
+
+        private void gerenciarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            gencli gencli = new gencli();
+            gencli.MdiParent = this;
+            gencli.Show();
+        }
     }
 }

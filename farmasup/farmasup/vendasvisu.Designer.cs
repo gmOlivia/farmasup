@@ -38,10 +38,8 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblQtdVendas = new System.Windows.Forms.Label();
-            this.lblTicketMedio = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblItensVendidos = new System.Windows.Forms.Label();
+            this.lblTotalFaturado = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendas)).BeginInit();
             this.SuspendLayout();
@@ -134,15 +132,6 @@
             this.lblQtdVendas.TabIndex = 9;
             this.lblQtdVendas.Text = "0";
             // 
-            // lblTicketMedio
-            // 
-            this.lblTicketMedio.AutoSize = true;
-            this.lblTicketMedio.Location = new System.Drawing.Point(486, 390);
-            this.lblTicketMedio.Name = "lblTicketMedio";
-            this.lblTicketMedio.Size = new System.Drawing.Size(14, 16);
-            this.lblTicketMedio.TabIndex = 10;
-            this.lblTicketMedio.Text = "0";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -152,32 +141,23 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Vendas no período:";
             // 
-            // label4
+            // lblTotalFaturado
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(334, 390);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 16);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Vendas por dia:";
-            // 
-            // lblItensVendidos
-            // 
-            this.lblItensVendidos.AutoSize = true;
-            this.lblItensVendidos.Location = new System.Drawing.Point(486, 415);
-            this.lblItensVendidos.Name = "lblItensVendidos";
-            this.lblItensVendidos.Size = new System.Drawing.Size(14, 16);
-            this.lblItensVendidos.TabIndex = 11;
-            this.lblItensVendidos.Text = "0";
+            this.lblTotalFaturado.AutoSize = true;
+            this.lblTotalFaturado.Location = new System.Drawing.Point(486, 394);
+            this.lblTotalFaturado.Name = "lblTotalFaturado";
+            this.lblTotalFaturado.Size = new System.Drawing.Size(14, 16);
+            this.lblTotalFaturado.TabIndex = 11;
+            this.lblTotalFaturado.Text = "0";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(334, 415);
+            this.label5.Location = new System.Drawing.Point(334, 394);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(133, 16);
+            this.label5.Size = new System.Drawing.Size(98, 16);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Intens vendidos (qnt):";
+            this.label5.Text = "Total Faturado:";
             // 
             // vendasvisu
             // 
@@ -185,10 +165,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 450);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblItensVendidos);
-            this.Controls.Add(this.lblTicketMedio);
+            this.Controls.Add(this.lblTotalFaturado);
             this.Controls.Add(this.lblQtdVendas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTitulo);
@@ -220,10 +198,8 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblQtdVendas;
-        private System.Windows.Forms.Label lblTicketMedio;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblItensVendidos;
+        private System.Windows.Forms.Label lblTotalFaturado;
         private System.Windows.Forms.Label label5;
     }
 }
