@@ -89,3 +89,4 @@ VALUES (@vendaId, @produtoId, @quantidade, @preco, @desconto);
 UPDATE produtos 
 SET estoque = estoque - @quantidade 
 WHERE id = @produtoId;
+

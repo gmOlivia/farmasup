@@ -219,5 +219,10 @@ namespace farmasup
                 MessageBox.Show("Erro ao registrar venda: " + ex.Message);
             }
         }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

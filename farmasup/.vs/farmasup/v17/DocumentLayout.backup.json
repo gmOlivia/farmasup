@@ -3,24 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|c:\\users\\jos\u00E9\\documents\\github\\farmasup\\farmasup\\farmasup\\gencli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|solutionrelative:farmasup\\gencli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|c:\\users\\jos\u00E9\\documents\\github\\farmasup\\farmasup\\farmasup\\vendasreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|solutionrelative:farmasup\\vendasreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|c:\\users\\jos\u00E9\\documents\\github\\farmasup\\farmasup\\farmasup\\gencli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|solutionrelative:farmasup\\gencli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|c:\\users\\jos\u00E9\\documents\\github\\farmasup\\farmasup\\farmasup\\vendasvisu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|solutionrelative:farmasup\\vendasvisu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|c:\\users\\jos\u00E9\\documents\\github\\farmasup\\farmasup\\farmasup\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|solutionrelative:farmasup\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|c:\\users\\jos\u00E9\\documents\\github\\farmasup\\farmasup\\farmasup\\vendasreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|solutionrelative:farmasup\\vendasreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|c:\\users\\jos\u00E9\\documents\\github\\farmasup\\farmasup\\farmasup\\estgen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|solutionrelative:farmasup\\estgen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|c:\\users\\jos\u00E9\\documents\\github\\farmasup\\farmasup\\farmasup\\estgen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|solutionrelative:farmasup\\estgen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|c:\\users\\jos\u00E9\\documents\\github\\farmasup\\farmasup\\farmasup\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|solutionrelative:farmasup\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|c:\\users\\jos\u00E9\\documents\\github\\farmasup\\farmasup\\farmasup\\cadcli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|solutionrelative:farmasup\\cadcli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|c:\\users\\jos\u00E9\\documents\\github\\farmasup\\farmasup\\farmasup\\gencli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|solutionrelative:farmasup\\gencli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|c:\\users\\jos\u00E9\\documents\\github\\farmasup\\farmasup\\farmasup\\estcad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|solutionrelative:farmasup\\estcad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|c:\\users\\jos\u00E9\\documents\\github\\farmasup\\farmasup\\farmasup\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|solutionrelative:farmasup\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|c:\\users\\jos\u00E9\\documents\\github\\farmasup\\farmasup\\farmasup\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9D1E8EA-C132-4AB5-8E92-58022BA1891F}|farmasup\\farmasup.csproj|solutionrelative:farmasup\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,70 +54,139 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "estgen.cs",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\estgen.cs",
-              "RelativeDocumentMoniker": "farmasup\\estgen.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\estgen.cs",
-              "RelativeToolTip": "farmasup\\estgen.cs",
-              "ViewState": "AgIAANkAAAAAAAAAAAAawLkAAAA/AAAAAAAAAA==",
+              "Title": "vendasreg.cs",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\vendasreg.cs",
+              "RelativeDocumentMoniker": "farmasup\\vendasreg.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\vendasreg.cs",
+              "RelativeToolTip": "farmasup\\vendasreg.cs",
+              "ViewState": "AgIAANMAAAAAAAAAAAAEwOAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T00:27:06.411Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-08-23T01:50:42.472Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "vendasvisu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\vendasvisu.cs",
+              "RelativeDocumentMoniker": "farmasup\\vendasvisu.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\vendasvisu.cs [Design]",
+              "RelativeToolTip": "farmasup\\vendasvisu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T01:50:07.374Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "gencli.cs",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\gencli.cs",
-              "RelativeDocumentMoniker": "farmasup\\gencli.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\gencli.cs",
-              "RelativeToolTip": "farmasup\\gencli.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAgwEwAAABHAAAAAAAAAA==",
+              "Title": "vendasreg.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\vendasreg.cs",
+              "RelativeDocumentMoniker": "farmasup\\vendasreg.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\vendasreg.cs [Design]",
+              "RelativeToolTip": "farmasup\\vendasreg.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T00:35:04.315Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T01:50:05.42Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\login.cs",
+              "RelativeDocumentMoniker": "farmasup\\login.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\login.cs [Design]",
+              "RelativeToolTip": "farmasup\\login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T01:33:30.488Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "estgen.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\estgen.cs",
               "RelativeDocumentMoniker": "farmasup\\estgen.cs",
               "ToolTip": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\estgen.cs [Design]",
               "RelativeToolTip": "farmasup\\estgen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T00:16:49.5Z",
+              "WhenOpened": "2025-08-23T01:43:08.832Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "gencli.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\gencli.cs",
-              "RelativeDocumentMoniker": "farmasup\\gencli.cs",
-              "ToolTip": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\gencli.cs [Design]",
-              "RelativeToolTip": "farmasup\\gencli.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T00:17:08.865Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "estcad.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\estcad.cs",
               "RelativeDocumentMoniker": "farmasup\\estcad.cs",
               "ToolTip": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\estcad.cs [Design]",
               "RelativeToolTip": "farmasup\\estcad.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T00:16:56.832Z",
+              "WhenOpened": "2025-08-23T01:43:05.996Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "gencli.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\gencli.cs",
+              "RelativeDocumentMoniker": "farmasup\\gencli.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\gencli.cs [Design]",
+              "RelativeToolTip": "farmasup\\gencli.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T01:34:13.29Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "cadcli.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\cadcli.cs",
+              "RelativeDocumentMoniker": "farmasup\\cadcli.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\cadcli.cs [Design]",
+              "RelativeToolTip": "farmasup\\cadcli.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T01:33:56.888Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "menu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\menu.cs",
+              "RelativeDocumentMoniker": "farmasup\\menu.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\menu.cs [Design]",
+              "RelativeToolTip": "farmasup\\menu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T01:33:34.777Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Cadastro.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\Cadastro.cs",
+              "RelativeDocumentMoniker": "farmasup\\Cadastro.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\Cadastro.cs [Design]",
+              "RelativeToolTip": "farmasup\\Cadastro.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T01:33:23.712Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "clientes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\clientes.cs",
+              "RelativeDocumentMoniker": "farmasup\\clientes.cs",
+              "ToolTip": "C:\\Users\\Jos\u00E9\\Documents\\GitHub\\farmasup\\farmasup\\farmasup\\clientes.cs [Design]",
+              "RelativeToolTip": "farmasup\\clientes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T01:33:45.453Z",
               "EditorCaption": " [Design]"
             }
           ]
